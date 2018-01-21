@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="98.753mm" width="150.21mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 150.20674 98.753006">
+ <defs>
+  <linearGradient id="I" y2="1022.3" gradientUnits="userSpaceOnUse" x2="3778.7" y1="1215.6" x1="3778.7">
+   <stop stop-color="#eadb21" offset="0"/>
+   <stop stop-color="#eadb21" offset=".5"/>
+   <stop stop-color="#fff32a" offset=".5"/>
+   <stop stop-color="#fff32a" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-40.557 -69.219)">
+  <g transform="matrix(.26458 0 0 .26458 -892.89 -179.79)">
+   <path opacity=".7" d="m3778.2 1146.4s-35.395-165.35 1.141-200.15c36.535-34.795-159.56 120.84-159.56 120.84" fill="#eef403"/>
+   <path opacity=".7" d="m3815.5 1145.2s-11.482-164.52 29.891-197.9c41.374-33.383-175.26 96.655-175.26 96.655" fill="#efc803"/>
+   <path opacity=".7" d="m3799.1 1109.2s-35.395 165.35 1.14 200.15c36.535 34.795-159.55-120.84-159.55-120.84" fill="#efc803"/>
+   <path opacity=".7" d="m3836.4 1110.4s-11.483 164.52 29.891 197.91c41.374 33.383-175.26-96.655-175.26-96.655" fill="#eef403"/>
+   <path opacity=".7" d="m3895.5 1099.7s158.42-57.674 145.22-137.73c-13.2-80.059 20.989 199.04 20.989 199.04" fill="#e0ab05"/>
+   <path opacity=".7" d="m3895.5 1136.2s168.2 16.215 145.22 137.73c-22.982 121.52 20.989-199.05 20.989-199.05" fill="#e0ab05"/>
+   <path opacity=".7" d="m3896.8 1085.6s139.92 8.152 186.7-72.127c46.786-80.279-56.314 192.06-56.314 192.06" fill="#eadb21"/>
+   <path opacity=".7" d="m3910.3 1178.5s119.63-9.999 161.43 57.733c41.796 67.732-52.367-163.25-52.367-163.25" fill="#eadb21"/>
+   <path fill="url(#I)" d="m4029.4 1118.9s-112.24 96.65-250.69 96.65-250.68-96.65-250.68-96.65 112.24-96.651 250.69-96.651 250.68 96.651 250.68 96.651z"/>
+   <ellipse rx="18.342" ry="17.647" cy="1092.5" cx="3629.3" fill="#fcfcfc"/>
+   <path d="m3668.8 1041.4s7.361 32.516 7.349 72.621c-0.013 40.106-7.396 72.618-7.396 72.618" stroke="#fcfcfc" stroke-miterlimit="10" fill="#fff"/>
+   <ellipse rx="12.91" ry="12.419" cy="1096.6" cx="3629.2" fill="#1b1464"/>
+   <ellipse rx="9.403" ry="9.045" cy="1100" cx="3638.7" fill="#fcfcfc"/>
+  </g>
+ </g>
+</svg>
