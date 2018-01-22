@@ -14,14 +14,42 @@ $(document).ready(function() {
     loop: true
   });
 
-  $("#teddy").velocity({
-    rotateZ: 3,
+  $(".theboat").velocity({
+    rotateZ: 5,
     translateY: 10
   }, {
     duration: 2500,
     easing: "swing",
     loop: true
-  });
+  },{ mobileHA: true });
+
+  $(".thewater2").velocity({
+    rotateZ: 5,
+    translateY: 12
+  }, {
+    duration: 2900,
+    easing: "swing",
+    loop: true,
+  },{ mobileHA: true });
+
+  $(".thewater").velocity({
+    rotateZ: -10,
+    translateY: 12
+  }, {
+    duration: 2500,
+    easing: "swing",
+    loop: true
+  },{ mobileHA: true });
+
+  $(".thesail").velocity({
+    rotateY:35,
+    scale:1.1,
+    translateY: 10
+  }, {
+    duration: 3500,
+    easing: "swing",
+    loop: true
+  },{ mobileHA: true });
 
   $(window).scroll(function() {
         var hT = $(".section-skillset h1").offset().top,
@@ -34,31 +62,32 @@ $(document).ready(function() {
             left: "-45%"
           }, {
             duration: 5000,
-            easing: "swing"
-          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:true});
+            easing: "swing",
+          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:500});
 
           $("#fish2").velocity({
             opacity: 0.7,
             left: "-45%"
           }, {
             duration: 3000,
-            easing: "swing"
-          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:true});
+            easing: "swing",
+          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:500});
 
           $("#fish3").velocity({
             opacity: 0.7,
             left: "-45%"
           }, {
             duration: 4000,
-            easing: "swing"
-          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:true});
+            easing: "swing",
+          }).velocity({translateY:10},{duration:2000, easing:"swing", loop:500});
 
         }
     });
 
-    loadsection(".section-skillset h1", ".section-skillset h2", "10px", 800);
-    loadsection(".section-skillset h2", ".section-skillset p", "10px", 800);
-    loadsection(".section-aboutme h1", ".section-aboutme p", "10px", 800);
+    loadsection(".section-skillset h1", ".section-skillset h2", "-10px", 800);
+    loadsection(".section-skillset h2", ".section-skillset p", "-10px", 800);
+    loadsection(".section-aboutme h1", ".section-aboutme p", "-10px", 800);
+    loadsection(".section-contactme h1",".section-contactme h1","-10px",1600);
 });
 
 function adapt_navbar() {

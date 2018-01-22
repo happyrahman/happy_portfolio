@@ -92,6 +92,49 @@ a:hover {
   padding:10%;
 }
 
+.height-transition {
+  transition:height 0.3s ease-in-out;
+}
+
+.section-myprojects h1 {
+  margin-bottom:75px;
+}
+
+.carousel {
+  position:static;
+}
+
+.carousel-override img{
+  width:auto;
+  height:600px;
+  max-height:600px;
+  margin-left:auto;
+  margin-right:auto;
+  transition:max-height 0.3s ease-in-out;
+}
+
+.carousel-caption {
+  position:static;
+  color:#363636;
+  text-shadow: none;
+}
+
+.carousel-control.left {
+  background-image:none;
+}
+
+.carousel-control.right {
+  background-image:none;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  color:black;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev {
+  color:black;
+}
+
 .section-aboutme {
   height:100vh;
   padding:20%;
@@ -99,25 +142,98 @@ a:hover {
   color:#424242;
 }
 
-.section-aboutme img {
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  width:80%;
+.section-aboutme .image_container {
+  margin-left:25%;
 }
+
+.image_container {
+  position:relative;
+  margin-top:100px;
+}
+
+.image_container img {
+  position:absolute;
+}
+
+.thesail {
+  top:-150px;
+  width:200px;
+}
+
+.theboat {
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:250px;
+  z-index:25;
+}
+
+.thewater  {
+  top:225px;
+  left:-200px;
+  width:480px;
+  z-index:50;
+}
+
+.thewater2 {
+  top:120px;
+  left:50px;
+  width:380px;
+  z-index: 0;
+}
+
 
 .section-aboutme h1 {
   margin-bottom:75px;
 }
 
 .section-aboutme p {
+  color:#757575;
+  /* font-size:150%;
+  line-height: 175%; */
   opacity:0;
+}
+
+.section-contactme {
+  height:100vh;
+  padding:10%;
+  /* background-color:#1D4C66; */
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #08363d, #85d8ce);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #08363d, #85d8ce); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:white;
+}
+
+.section-contactme h1 {
+  line-height: 120%;
+  font-size: 600%;
+  margin-bottom:100px;
+  opacity:0;
+}
+
+.section-contactme p {
+  border:1px solid white;
+  color:white;
+  background-color:transparent;
+  padding:15px;
+  text-transform: uppercase;
+  width:150px;
+  text-align: center;
+  font-weight: bold;
+  transition:background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor:pointer;
+}
+
+.section-contactme p:hover {
+  background-color:white;
+  color:#424242;
 }
 
 .footer {
   color:white;
   padding:50px 10% 50px 10%;
-  background-color:#424242;
+  background-color:#212121;
 }
 
 /* Navigation Bar */
@@ -198,6 +314,15 @@ a:hover {
   background-color:white;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color:transparent;
+  color:white;
+}
+
+.active {
+  border-bottom:5px solid white;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 768px) and (min-width: 320px) {
   .section-hello {
@@ -223,6 +348,67 @@ a:hover {
 
   .section-aboutme {
     padding:10%;
-    height:auto;
+    height:inherit;
+  }
+
+  .section-aboutme p {
+    margin-bottom:100px;
+  }
+
+  .section-aboutme .image_container {
+    margin-left:25%;
+    margin-bottom:250px;
+  }
+
+  .thesail {
+    top:-50px;
+    width:100px;
+  }
+
+  .theboat {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:140px;
+  }
+
+  .thewater  {
+    top:120px;
+    left:-80px;
+    width:250px;
+  }
+
+  .thewater2 {
+    top:80px;
+    left:80px;
+    width:150px;
+  }
+
+  .section-contactme {
+    height:inherit;
+  }
+
+  .section-contactme h1 {
+    font-size:200%;
+    margin-bottom:50px;
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 767px) {
+  .section-aboutme .image_container {
+    margin-left:35%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section-skillset {
+    height:110vh;
+  }
+
+  .thewater2 {
+    top:80px;
+    left:70px;
+    width:150px;
   }
 }
