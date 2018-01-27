@@ -36,7 +36,7 @@
   <meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,700|Lora" rel="stylesheet">
 
   <!-- Open Graph -->
   <meta property="og:image" content="images/ogimage.jpg" />
@@ -45,20 +45,42 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div id="myNav" class="overlay">
+
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+          <a href="index.html" onclick="closeNav()">Home</a>
+          <a href="#section-skillset" onclick="closeNav()">Skillset</a>
+          <a href="#section-myprojects" onclick="closeNav()">Projects</a>
+          <a href="#section-aboutme" onclick="closeNav()">About</a>
+          <a href="#section-contactme" onclick="closeNav()">Contact</a>
+        </div>
+
+      </div>
+
+
+    <!--trying to open overlay Menu-->
+    <div class="container-fluid">
+     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
-          <a class="navbar-brand" href="#">Happy Rahman</a>
+            </button>-->
+          <!--<a class="navbar-brand" href="#">Happy Rahman</a>-->
+          <!-- Use to open/show the overlay navigation menu -->
+          <span class="NewNavMenu glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <li><a href="#section-skillset">Skillset</a></li>
@@ -66,10 +88,12 @@
             <li><a href="#section-aboutme">About</a></li>
             <li><a href="#section-contactme">Contact</a></li>
           </ul>
-        </div>
+        </div>-->
       </div>
     </nav>
-  </div>
+</div>
+
+
 
   <div class="container-fluid padding-0">
 
@@ -154,15 +178,15 @@
               </div>
             </div>
 
-            <div class="item carousel-override">
-              <img src="images/projects/project4.jpg">
+            <div class="item carousel-phone-override">
+              <img src="images/projects/project4v2.jpg">
               <div class="carousel-caption">
-                <h3>Campus Navigator Application</h3>
-                <p>The application helps students locate places within SEGi University campus.<br />Developed for Final Year Project</p>
+                <h3>E-commerce Application Mockup</h3>
+                <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
               </div>
             </div>
 
-            <div class="item carousel-override">
+            <div class="item carousel-phone-override">
               <img src="images/projects/project1.jpg">
               <div class="carousel-caption">
                 <h3>Design Mockup for Marathon Registration App</h3>
@@ -170,7 +194,7 @@
               </div>
             </div>
 
-            <div class="item carousel-override">
+            <div class="item carousel-phone-override">
               <img src="images/projects/project2.jpg">
               <div class="carousel-caption">
                 <h3>Design Mockup for University Finder App</h3>
@@ -178,8 +202,8 @@
               </div>
             </div>
 
-            <div class="item carousel-override">
-              <img src="images/projects/project3.jpg">
+            <div class="item carousel-phone-override">
+              <img src="images/projects/project3v2.jpg">
               <div class="carousel-caption">
                 <h3>Design Mockup for Freelance Task App</h3>
                 <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
@@ -205,7 +229,7 @@
         <div class="section-aboutme">
           <div class="image_container">
             <img src="images/teddy_3.svg" id="teddy" class="thesail"/>
-            <img src="images/teddy_1.svg" id="teddy" class="theboat"/>
+            <img src="images/teddy_1v2.svg" id="teddy" class="theboat"/>
             <img src="images/wave1.svg" id="teddy" class="thewater"/>
             <img src="images/wave2.svg" id="teddy" class="thewater2"/>
           </div>
@@ -221,8 +245,7 @@
             I love to design websites and to create user interfaces.
             <br /><br />
             I expect to graduate by mid of 2018 and will be available for full-time work from June.<br /><br />
-            --<br /><br />
-            This website and all the vector assets you see took 4 days, 16 cups of coffee and <b>lots of love</b> to build.
+            <br /><br />
           </p>
         </div>
       </div>
@@ -232,7 +255,7 @@
       <div class="section-contactme padding-0">
         <h1>Like what you see?<br />Let's connect and I'll sail you forward!</h1>
         <span onclick="window.location = 'mailto:happy_rahman@outlook.com'">
-          send me an email
+           send me an email
         </span>
 
         <span onclick="window.open('https://www.linkedin.com/in/happy-rahman/')">

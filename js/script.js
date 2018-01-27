@@ -2,6 +2,7 @@ var $navbar = $(".navbar");
 
 $(document).ready(function() {
   adapt_navbar();
+
   $(".section-hello>div").velocity("transition.slideUpIn", {
     duration: 1500
   });
@@ -111,4 +112,21 @@ function loadsection(trigger, section, yamount, time) {
             $(section).velocity({opacity:1, translateY:yamount},{duration:time, easing:"swing"});
         }
     });
+}
+
+/* Open when someone clicks on the span element for HappyNav*/
+function openNav() {
+    $(".overlay a").velocity({opacity:1},{duration:1000});
+    $(".overlay .closebtn").velocity({rotateZ:90},{duration:100});
+    $navbar.addClass("navbar-scroll-state");
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    $(".overlay a").velocity({opacity:0},{duration:1000});
+    $(".overlay .closebtn").velocity({rotateZ:-90});
+    $navbar.removeClass("navbar-scroll-state");
+    document.getElementById("myNav").style.width = "0%";
+    adapt_navbar();
 }
