@@ -85,10 +85,10 @@ $(document).ready(function() {
         }
     });
 
-    loadsection(".section-skillset h1", ".section-skillset h2", "-10px", 800);
-    loadsection(".section-skillset h2", ".section-skillset p", "-10px", 800);
-    loadsection(".section-aboutme h1", ".section-aboutme p", "-10px", 800);
-    loadsection(".section-contactme h1",".section-contactme h1","-10px",1600);
+    loadsection(".section-skillset h1", ".section-skillset h2");
+    loadsection(".section-skillset h2", ".section-skillset p");
+    loadsection(".section-aboutme h1", ".section-aboutme p");
+    loadsection(".section-contactme h1",".section-contactme h1");
 });
 
 function adapt_navbar() {
@@ -102,14 +102,26 @@ function adapt_navbar() {
   });
 }
 
-function loadsection(trigger, section, yamount, time) {
+// function loadsection(trigger, section, yamount, time) {
+//   $(window).scroll(function() {
+//         var hT = $(trigger).offset().top,
+//             hH = $(trigger).outerHeight(),
+//             wH = $(window).height(),
+//             wS = $(this).scrollTop();
+//         if (wS > (hT + hH - wH)) {
+//             $(section).velocity({opacity:1, translateY:yamount},{duration:time, easing:"swing"});
+//         }
+//     });
+// }
+
+function loadsection(trigger, section) {
   $(window).scroll(function() {
         var hT = $(trigger).offset().top,
             hH = $(trigger).outerHeight(),
             wH = $(window).height(),
             wS = $(this).scrollTop();
         if (wS > (hT + hH - wH)) {
-            $(section).velocity({opacity:1, translateY:yamount},{duration:time, easing:"swing"});
+            $(section).addClass("paragraphTransition");
         }
     });
 }
@@ -120,6 +132,12 @@ function openNav() {
     $(".overlay .closebtn").velocity({rotateZ:90},{duration:100});
     $navbar.addClass("navbar-scroll-state");
     document.getElementById("myNav").style.width = "100%";
+    $(".section-hello").addClass("addBlur");
+    $(".section-skillset").addClass("addBlur");
+    $(".section-myprojects").addClass("addBlur");
+    $(".section-aboutme").addClass("addBlur");
+    $(".section-contactme").addClass("addBlur");
+    $(".footer").addClass("addBlur");
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
@@ -129,4 +147,10 @@ function closeNav() {
     $navbar.removeClass("navbar-scroll-state");
     document.getElementById("myNav").style.width = "0%";
     adapt_navbar();
+    $(".section-hello").removeClass("addBlur");
+    $(".section-skillset").removeClass("addBlur");
+    $(".section-myprojects").removeClass("addBlur");
+    $(".section-aboutme").removeClass("addBlur");
+    $(".section-contactme").removeClass("addBlur");
+    $(".footer").removeClass("addBlur");
 }

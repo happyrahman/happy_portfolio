@@ -3,17 +3,20 @@ body {
 }
 
 h1 {
-  font-family:'Bree Serif', serif;
+  font-family:'Hind', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-  font-family:'Bree Serif', serif;
+  font-family:'Open Sans', sans-serif;
+  font-weight: 700;
   font-size:20px;
 }
 
 p {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
   line-height:25px;
+  opacity:0;
 }
 
 a {
@@ -37,6 +40,16 @@ a:hover {
   background-repeat: no-repeat;
   position:relative;
   z-index:50;
+}
+
+.section-hello h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+}
+
+.section-hello h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 .section-hello>div {
@@ -127,7 +140,16 @@ a:hover {
   position:static;
   color:#363636;
   text-shadow: none;
+}
 
+.carousel-caption h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  opacity:1;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .carousel-control.left {
@@ -217,6 +239,7 @@ a:hover {
 }
 
 .section-contactme h1 {
+  font-family: 'Open Sans', sans-serif;
   line-height: 120%;
   font-size: 600%;
   margin-bottom:100px;
@@ -248,6 +271,7 @@ a:hover {
   transition:background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor:pointer;
   font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .section-contactme span:nth-of-type(1) {
@@ -264,10 +288,15 @@ a:hover {
   color:white;
   padding:20px 10% 20px 10%;
   background-color:#212121;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Happy navigation*/
 /* The Overlay (background) */
+.addBlur {
+  filter:blur(9px);
+}
+
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100vh;
@@ -277,7 +306,7 @@ a:hover {
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0, 172, 193, 0.9); /* Black w/opacity */
+    background-color: rgba(0, 172, 193, 0.6); /* Black w/opacity */
     overflow: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -285,7 +314,7 @@ a:hover {
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
+    top: 20%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -299,32 +328,51 @@ a:hover {
     color: white;/*#818181;*/
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
-    font-family: 'Playfair Display', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     opacity:0;
+    transition: font-weight 0s ease-in;
 }
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-    color: #424242;
+  font-weight: 700;
 }
 
 /* Position the close button (top right corner) */
 .glyphicon-menu-hamburger {
-  font-size: 28px;
+  font-size: 18px;
   padding-top:10px;
 }
 
 .overlay .closebtn {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 15px;
     font-family: "Lora, Serif";
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .NewNavMenu {
     color: white;
     cursor:pointer;
+}
+
+.paragraphTransition {
+  animation: paragraph_transition 0.8s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes paragraph_transition {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -435,6 +483,10 @@ a:hover {
     height:100vh;
   }
 
+  .section-hello h1 {
+    font-size: 40px;
+  }
+
   .section-hello>div {
     padding:150px 50px 100px 50px;
   }
@@ -504,21 +556,12 @@ a:hover {
   .section-contactme span:nth-of-type(1) {
     margin-right:10px;
   }
-}
 
-@media only screen and (max-width: 768px) and (min-width: 320px) {
   .section-myprojects {
     height:110vh;
   }
 
-  @media only screen and (max-width: 768px) and (min-width: 320px) {
-    .carousel-override img {
-  /*  width:auto;
-    height:600px;
-    max-height:600px;
-    margin-left:auto;
-    margin-right:auto;
-    transition:max-height 0.3s ease-in-out;*/
+  .carousel-override img {
     width: auto;
     height:600 px;
     max-height: 600 px;
@@ -533,6 +576,8 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
 
 
 @media only screen and (min-width: 420px) and (max-width: 767px) {
