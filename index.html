@@ -30,14 +30,14 @@
   <link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
   <meta name="application-name" content="&nbsp;"/>
   <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
   <meta name="msapplication-square70x70logo" content="images/favicon/mstile-70x70.png" />
   <meta name="msapplication-square150x150logo" content="images/favicon/mstile-150x150.png" />
   <meta name="msapplication-wide310x150logo" content="images/favicon/mstile-310x150.png" />
   <meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Hind:300,400,700|Open+Sans:300,400,700|Bree+Serif|Great+Vibes" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind:300,400,700|Open+Sans:300,400,700|Bree+Serif|Great+Vibes|Montserrat" rel="stylesheet">
 
   <!-- Open Graph -->
   <meta property="og:image" content="images/ogimage.jpg" />
@@ -52,6 +52,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <!-- Overlay content -->
       <div class="overlay-content">
+
           <a href="index.html" onclick="closeNav()">Home</a>
           <a href="#section-skillset" onclick="closeNav()">Skillset</a>
           <a href="#section-myprojects" onclick="closeNav()">Projects</a>
@@ -140,15 +141,21 @@
     <div class="col-md-12 padding-0">
       <div class="section-myprojects padding-0" id="section-myprojects">
         <h1>My Projects</h1>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+        <span class="glyphicon glyphicon-chevron-left" id="left" onclick="show_project_left()"></span>
+        <span class="glyphicon glyphicon-chevron-right" id="right" onclick="show_project_right()"></span>
+        <div class="project-images">
+        </div>
 
-          <!-- Wrapper for slides -->
+        <div>
+          <h3 class="text-center">Cosmetic Management Website</h3>
+          <p class="text-center">An inventory management e-commerce website made with PHP and SOAP Web Service. <br />
+            Multiple vendors can sign up and manage their brands and inventory. Developed for coursework.</p>
+        </div>
+
+        <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+
           <div class="carousel-inner">
             <div class="item active carousel-override">
               <img src="images/projects/project5.jpg">
@@ -208,7 +215,7 @@
             </div>
           </div>
 
-          <!-- Left and right controls -->
+
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
@@ -217,7 +224,7 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div>-->
       </div>
     </div>
 
@@ -234,7 +241,7 @@
       </div>
 
       <div class="col-md-6 padding-0">
-        <div class="section-aboutme" id="section-aboutme">
+        <div class="section-aboutme mbtm_" id="section-aboutme">
           <h1>About Me</h1>
           <p>
             I'm a software engineering major living in Malaysia.

@@ -33,7 +33,7 @@ a:hover {
 }
 
 .section-hello {
-  height:125vh;
+  height:850px;
   background: url("../images/hill.svg"), linear-gradient(to bottom, #ffd194, #70e1f5);
   background-position: bottom;
   background-size: contain;
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .section-hello h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -68,7 +68,7 @@ a:hover {
 
 .section-skillset {
   padding:20%;
-  height:100vh;
+  height:850px;
   background:linear-gradient(to bottom, #9DE4F0, #00ACC1);
   z-index:-25;
   color:white;
@@ -87,7 +87,8 @@ a:hover {
 }
 
 .section-skillset h1 {
-  margin-bottom:75px;
+  opacity:0;
+  margin-bottom: 75px;
 }
 
 .section-skillset h2 {
@@ -100,10 +101,51 @@ a:hover {
 }
 
 .section-myprojects {
+  position: relative;
   background-color:white;
   /*height:auto;*/
-  height:140vh;
+  height:auto;
   padding:10%;
+}
+
+.project-images {
+  background-image: url("../images/projects/project5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll; /*fixed - kinda looks like paralex*/
+  background-position: center;
+  background-size:contain;
+  height:500px;
+  width:100%;
+  margin-top:75px;
+}
+
+.section-myprojects p{
+  color: black;
+  opacity: 1;
+}
+
+.section-myprojects h1{
+  margin-bottom: 200px;
+}
+
+.glyphicon-chevron-right{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 3%;
+  z-index: 90;
+  cursor:pointer;
+}
+
+.glyphicon-chevron-left{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 3%;
+  z-index: 90;
+  cursor:pointer;
 }
 
 .height-transition {
@@ -112,6 +154,9 @@ a:hover {
 
 .section-myprojects h1 {
   margin-bottom:75px;
+  top:50px;
+  position: absolute;
+
 }
 
 .carousel {
@@ -119,12 +164,6 @@ a:hover {
 }
 
 .carousel-override img{
-/*  width:auto;
-  height:600px;
-  max-height:600px;
-  margin-left:auto;
-  margin-right:auto;
-  transition:max-height 0.3s ease-in-out;*/
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -169,7 +208,7 @@ a:hover {
 }
 
 .section-aboutme {
-  height:100vh;
+  height:750px;
   padding:20%;
   background-color:#EEEEEE;
   color:#424242;
@@ -218,6 +257,7 @@ a:hover {
 
 
 .section-aboutme h1 {
+  opacity:0;
   margin-bottom:75px;
 }
 
@@ -229,7 +269,7 @@ a:hover {
 }
 
 .section-contactme {
-  height:100vh;
+  height:850px;
   padding:10%;
   /* background-color:#1D4C66; */
   background: #43C6AC;  /* fallback for old browsers */
@@ -241,7 +281,7 @@ a:hover {
 .section-contactme h1 {
   font-family: 'Open Sans', sans-serif;
   line-height: 120%;
-  font-size: 600%;
+  font-size: 500%;
   margin-bottom:100px;
   opacity:0;
 }
@@ -260,6 +300,7 @@ a:hover {
 }
 
 .section-contactme span {
+  opacity:0;
   border:1px solid white;
   color:white;
   background-color:transparent;
@@ -313,30 +354,35 @@ a:hover {
 
 /* Position the content inside the overlay */
 .overlay-content {
-    position: relative;
-    top: 20%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
+    position: absolute;
+    left:50%;
+    top: 50%; /* 25% from the top */
+    width: 200px; /* 100% width */
+    transform:translate(-50%, -50%);
+    text-align: left; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    border-left: 1px solid white;
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
-    padding: 8px;
+    padding: 10px;
     text-decoration: none;
     font-size: 36px;
     color: white;/*#818181;*/
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     opacity:0;
     transition: font-weight 0s ease-in;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Position the close button (top right corner) */
@@ -359,7 +405,17 @@ a:hover {
 }
 
 .paragraphTransition {
-  animation: paragraph_transition 0.8s ease-in;
+  animation: paragraph_transition 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.imageTransition {
+  animation: image_transition 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.imageTransition_2 {
+  animation: image_transition_2 0.8s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -371,9 +427,35 @@ a:hover {
 
   to {
     opacity: 1;
-    transform: translateY(-10px);
+    transform: translateY(-25px);
   }
 }
+
+@keyframes image_transition {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes image_transition_2 {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
@@ -474,13 +556,13 @@ a:hover {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 768px) and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .section-hello {
     background: url("../images/hill-2.svg"), linear-gradient(to bottom, #ffd194, #70e1f5);
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
-    height:100vh;
+    height:650px;
   }
 
   .section-hello h1 {
@@ -497,16 +579,37 @@ a:hover {
   }
 
   .section-skillset {
+    height:600px;
     padding:10%;
+  }
+
+  .section-myprojects {
+    margin-bottom: 100px;
+  }
+
+  .section-myprojects div:nth-of-type(2){
+    margin-top:-50px;
+  }
+
+  .glyphicon-chevron-right{
+    font-size: 25px;
+  }
+
+  .glyphicon-chevron-left{
+    font-size: 25px;
   }
 
   .section-aboutme {
     padding:10%;
-    height:inherit;
+    height:400px;
   }
 
-  .section-aboutme p {
-    margin-bottom:100px;
+  .mbtm_ {
+    height: auto;
+  }
+
+  .mbtm_ p {
+    padding-bottom: 25px;
   }
 
   .section-aboutme .image_container {
@@ -540,13 +643,13 @@ a:hover {
   }
 
   .section-contactme {
-    height:100vh;
+    height:650px;
   }
 
   .section-contactme h1 {
-    font-size:250%;
+    font-size:225%;
     margin-bottom:50px;
-    margin-top:60%;
+    margin-top:175px
   }
 
   .section-contactme span {
@@ -558,24 +661,24 @@ a:hover {
   }
 
   .section-myprojects {
-    height:110vh;
+    height:768px;
   }
 
-  .carousel-override img {
+  /* .carousel-override img {
     width: auto;
     height:600 px;
     max-height: 600 px;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
-  .carousel-phone-override img{
+  /* .carousel-phone-override img{
     width: auto;
     height:600 px;
     max-height: 600 px;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 }
 
 
