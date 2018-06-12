@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#FFD194" />
+  <meta name="theme-color" content="#FFD194" id="chrome_color"/>
 
   <title>Happy Rahman's Portfolio</title>
 
@@ -67,26 +67,8 @@
      <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>-->
-          <!--<a class="navbar-brand" href="#">Happy Rahman</a>-->
-          <!-- Use to open/show the overlay navigation menu -->
           <span class="NewNavMenu glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
         </div>
-
-      <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#section-skillset">Skillset</a></li>
-            <li><a href="#section-myprojects">Projects</a></li>
-            <li><a href="#section-aboutme">About</a></li>
-            <li><a href="#section-contactme">Contact</a></li>
-          </ul>
-        </div>-->
       </div>
     </nav>
 </div>
@@ -99,7 +81,7 @@
       <div class="section-hello" id="section-hello">
         <div class="text-center">
           <h1>Hello! I'm Happy</h1>
-          <h2>I'm a Web Designer</h2>
+          <h2>I'm a Web Developer</h2>
         </div>
 
         <img src="images/sail.svg" />
@@ -141,90 +123,88 @@
     <div class="col-md-12 padding-0">
       <div class="section-myprojects padding-0" id="section-myprojects">
         <h1>My Projects</h1>
-        <span class="glyphicon glyphicon-chevron-left" id="left" onclick="show_project_left()"></span>
-        <span class="glyphicon glyphicon-chevron-right" id="right" onclick="show_project_right()"></span>
-        <div class="project-images">
+        <div class="project-grid">
+          <img src="images/projects/grid.jpg" class="img-responsive">
+          <p id="show_projects">
+            View Projects
+          </p>
         </div>
 
-        <div>
-          <h3 class="text-center">Cosmetic Management Website</h3>
-          <p class="text-center">An inventory management e-commerce website made with PHP and SOAP Web Service. <br />
-            Multiple vendors can sign up and manage their brands and inventory. Developed for coursework.</p>
-        </div>
-
-        <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-
-
-          <div class="carousel-inner">
-            <div class="item active carousel-override">
-              <img src="images/projects/project5.jpg">
-              <div class="carousel-caption">
-                <h3>Cosmetic Management Website</h3>
-                <p>An inventory management e-commerce website made with PHP and SOAP Web Service. <br />
-                  Multiple vendors can sign up and manage their brands and inventory. Developed for coursework.</p>
-              </div>
+        <div class="projects_tray">
+          <span class="projects_tray_closebtn" id="projects_tray_closebtn">&times;</span>
+          <div class="project_container" id="p_first_bud">
+            <div class="project_image text-center">
+              <img src="images/projects/first_bud_1.jpg"/>
+              <img src="images/projects/first_bud_2.jpg"/>
+              <h1 class="text-center">FirstBud</h1>
+              <h2 class="text-center">NodeJS Application</h2>
             </div>
 
-            <div class="item carousel-override">
-              <img src="images/projects/project6.jpg">
-              <div class="carousel-caption">
-                <h3>Travel Agency Website</h3>
-                <p>A simple travel agency site made with PHP.<br />Developed for coursework.</p>
-              </div>
-            </div>
+            <div class="project_text">
+              <p>
+                FirstBud is a <b>NodeJS Web Application</b> made specifically for new SEGi Students who might need help navigating within the campus.
+                The application shows an indoor map of the university with certain key places acting as starting points. It <b>generates directions</b> based on the user's current location and destination.
+                In addition to the map, FirstBud also helps students find <b>restaurants</b> based on their cuisine of choice and nearby <b>amenities</b> like bus/train stations, shopping malls and the like.
+                Amenities and restaurants are recommended to all users based on the number of <b>'Likes'</b> they receive from the user base.
+                The application was developed as part of my <b>Degree Final Year Project.</b>
 
-            <div class="item carousel-override">
-              <img src="images/projects/project7.jpg">
-              <div class="carousel-caption">
-                <h3>Sports Event Website</h3>
-                <p>A simple informational website.<br /> Developed for coursework.</p>
-              </div>
-            </div>
-
-            <div class="item carousel-phone-override">
-              <img src="images/projects/project4v2.jpg">
-              <div class="carousel-caption">
-                <h3>E-commerce Application Mockup</h3>
-                <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
-              </div>
-            </div>
-
-            <div class="item carousel-phone-override">
-              <img src="images/projects/project1.jpg">
-              <div class="carousel-caption">
-                <h3>Design Mockup for Marathon Registration App</h3>
-                <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
-              </div>
-            </div>
-
-            <div class="item carousel-phone-override">
-              <img src="images/projects/project2.jpg">
-              <div class="carousel-caption">
-                <h3>Design Mockup for University Finder App</h3>
-                <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
-              </div>
-            </div>
-
-            <div class="item carousel-phone-override">
-              <img src="images/projects/project3v2.jpg">
-              <div class="carousel-caption">
-                <h3>Design Mockup for Freelance Task App</h3>
-                <p>Designed during internship at Getright Malaysia Sdn Bhd</p>
-              </div>
+              </p>
             </div>
           </div>
 
+          <div class="project_container" id="p_lemone">
+            <div class="project_image text-center">
+              <img src="images/projects/lemone.png"/>
+              <h1 class="text-center">Travel Agency</h1>
+              <h2 class="text-center">PHP Application</h2>
+            </div>
 
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>-->
+            <div class="project_text">
+              <p>
+                Le'Mone is a Travel Agency Portal <b> made with PHP</b>. Users can visit the site to view and book travel packages
+                and flights. In addition, a <b>content management system</b> is in place to view
+                total number of travel packages booked by the site visitors and manage the registered users of the site. This was developed
+                 as part of a my Degree PHP module coursework.
+
+              </p>
+            </div>
+          </div>
+
+          <div class="project_container" id="p_elegance">
+            <div class="project_image text-center">
+              <img src="images/projects/elegance.png"/>
+              <h1 class="text-center">E-Commerce site</h1>
+              <h2 class="text-center">SOAP based Web Service</h2>
+            </div>
+
+            <div class="project_text">
+              <p>
+                Elegance e commerce website is a <b>SOAP web service written with PHP</b>. It's an e-commerce website where users can purchase cosmetics
+                The application supports three seperate user groups, namely, admin, suppliers of cosmetics and the consumers. Suppliers can registered
+                their companies, products on the marketplace, manage and <b>view their revenue and manage their stock</b>. Elegance was built as
+                part of a coursework for Web Services Module in Degree.
+
+              </p>
+            </div>
+          </div>
+
+          <div class="project_container" id="p_ui">
+            <div class="project_image text-center">
+              <img src="images/projects/ui1.jpg"/>
+              <img src="images/projects/ui2.jpg"/>
+              <img src="images/projects/ui3.jpg"/>
+              <img src="images/projects/ui4.jpg"/>
+              <h1 class="text-center">UI Mockups</h1>
+              <h2 class="text-center">Misscelleneous</h2>
+            </div>
+
+            <div class="project_text">
+              <p>
+                These User Interface Designs were created during my 6 month internship at Getright Malaysia Sdn Bhd for various projects. 
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -278,10 +258,10 @@
   </div>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+  <script src="js/script.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/velocity.min.js"></script>
   <script src="js/velocity.ui.js"></script>
-  <script src="js/script.js"></script>
 </body>
 
 </html>

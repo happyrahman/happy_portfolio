@@ -4,6 +4,7 @@ var $project_heading = $(".section-myprojects div:nth-of-type(2) h3");
 var $project_description = $(".section-myprojects div:nth-of-type(2) p");
 
 var projects = [
+  ["../images/projects/first_bud.jpg", "Campus Navigator App", "A NodeJS application for new students of SEGi University to help them navigate the campus and find nearby foodcourts and amenities"],
   ["../images/projects/project5.jpg", "Cosmetic Management Website", "An inventory management e-commerce website made with PHP and SOAP Web Service. <br />Multiple vendors can sign up and manage their brands and inventory. Developed for coursework."],
   ["../images/projects/project6.jpg", "Travel Agency Website", "A simple travel agency site made with PHP.<br />Developed for coursework."],
   ["../images/projects/project7.jpg", "Sports Event Website", "A simple informational website.<br /> Developed for coursework."],
@@ -17,6 +18,11 @@ var vertical_index = 0;
 var horizontal_index = 0;
 
 $(document).ready(function() {
+  change_img();
+  $(window).resize(function() {
+    change_img();
+  });
+
   adapt_navbar();
 
   $(".section-hello>div").velocity("transition.slideUpIn", {
@@ -127,6 +133,18 @@ $(document).ready(function() {
     }
   });
 
+  $("#show_projects").click(function() {
+    $("html").css("overflow","hidden");
+    $(".projects_tray").addClass("projects_tray_animation");
+    $("#chrome_color").attr("content", "#151515");
+  });
+
+  $("#projects_tray_closebtn").click(function() {
+    $("html").css("overflow","auto");
+    $(".projects_tray").removeClass("projects_tray_animation");
+    $("#chrome_color").attr("content", "#FFD194");
+  });
+
   loadsection(".section-skillset h1", ".section-skillset h1");
   loadsection(".section-skillset h1", ".section-skillset h2");
   loadsection(".section-skillset h2", ".section-skillset p");
@@ -135,6 +153,17 @@ $(document).ready(function() {
   loadsection(".section-contactme h1", ".section-contactme h1");
   loadsection(".section-contactme h1", "span");
 });
+
+
+function change_img() {
+  var window_width = $(window).width();
+  console.log(window_width);
+  if(window_width < 768) {
+    $(".project-grid img").attr("src", "images/projects/gridPhone.jpg");
+  } else {
+    $(".project-grid img").attr("src", "images/projects/grid.jpg");
+  }
+}
 
 function adapt_navbar() {
   $(window).scroll(function() {
