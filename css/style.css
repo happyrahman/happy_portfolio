@@ -43,18 +43,44 @@ a:hover {
 }
 
 .section-hello h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
+  font-family: 'Engagement', cursive;
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.section-hello h1 span {
+  font-size: calc(100% + 20px);
+}
+
+.breaker {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 30px auto 30px auto;
+  width: 0;
+  animation: line-grow 1s cubic-bezier(.09,.15,.72,.99);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line-grow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 300px;
+  }
 }
 
 .section-hello h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   font-weight: 400;
 }
 
 .section-hello>div {
   color:white;
-  padding:150px 100px 100px 100px;
+  padding:100px 100px 100px 100px;
 }
 
 .section-hello>img {
@@ -72,6 +98,11 @@ a:hover {
   background:linear-gradient(to bottom, #9DE4F0, #00ACC1);
   z-index:-25;
   color:white;
+}
+
+.important {
+  font-size: calc(100% + 5px);
+  line-height: 35px;
 }
 
 .section-skillset-img-container {
@@ -754,7 +785,7 @@ a:hover {
   }
 
   .section-hello>div {
-    padding:150px 50px 100px 50px;
+    padding:100px 50px 100px 50px;
   }
 
   .section-hello>img {
