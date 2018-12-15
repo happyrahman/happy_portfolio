@@ -1,0 +1,139 @@
+/* Margin classes */
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+/* End of margin classes */
+
+p {
+    opacity: 1;
+}
+
+.NewNavMenu-override {
+    color: rgba(0,0,0,.7);
+}
+
+.food-app-container-margin {
+    margin-top: 50px;
+    padding: 10%;
+}
+
+.project-container img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-text {
+    color: rgba(0,0,0,.7);
+}
+
+.project-text h1 {
+    font-family: 'Hind', sans-serif;
+}
+
+.project-text p {
+    margin: 15px 0;
+}
+
+.project-text.yours {
+    color: white;
+}
+
+.project-text.lovoc {
+    color: white;
+}
+
+.project-container-dark {
+    padding: 10%;
+    background: linear-gradient(120deg, #A7AEB7, #555A65);
+    margin-bottom: -1px;
+}
+
+.project-container-dark h1 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.project-container-dark p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#musicapp {
+    margin-bottom: -6px;
+}
+
+#annkang_video {
+    margin-bottom: 100px;
+    -webkit-box-shadow: 0px 35px 50px -22px rgba(0,0,0,0.25);
+    box-shadow: 0px 35px 50px -22px rgba(0,0,0,0.25);
+}
+
+.center-content {
+    text-align: center;
+}
+
+.yours-gradient {
+    background: linear-gradient(to right, #95D572, #34BFCB);
+}
+
+.lovoc-gradient {
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 35px 50px -22px rgba(0,0,0,0.25);
+    box-shadow: 0px 35px 50px -22px rgba(0,0,0,0.25);
+}
+
+
+@media (min-width: 768px) {
+
+    .food-app-container-margin {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 0;
+    }
+
+    .project-text h1 {
+        font-size: 50px;
+    }
+    
+    .project-text p {
+        font-size: 20px;
+        margin: 15px 0;
+        line-height: 30px;
+    }
+
+    #annkang_video {
+        -webkit-box-shadow: 29px 35px 50px -4px rgba(0,0,0,0.2);
+        box-shadow: 29px 35px 50px -4px rgba(0,0,0,0.2);
+    }
+
+    .shadow {
+        -webkit-box-shadow: 29px 35px 50px -4px rgba(0,0,0,0.2);
+        box-shadow: 29px 35px 50px -4px rgba(0,0,0,0.2);
+    }
+
+    
+    .project-text.yours {
+        margin-left: 50px;
+    }
+
+    .project-text.lovoc {
+        margin-left: 50px;
+    }
+}
