@@ -113,9 +113,9 @@ p {
     }
     
     .project-text p {
-        font-size: 20px;
+        font-size: 14px;
         margin: 15px 0;
-        line-height: 30px;
+        line-height: 25px;
     }
 
     #annkang_video {
